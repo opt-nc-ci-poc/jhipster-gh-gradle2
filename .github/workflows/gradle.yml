@@ -51,7 +51,7 @@ jobs:
         arguments: -Pprod check jacocoTestReport sonarqube build -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=${{ github.repository_owner }} -Dsonar.projectKey=${{ github.repository_owner }}_jhipster-gh-gradle2
         dependency-graph: generate-and-submit
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: app.jar
         path: build/libs/*.jar
